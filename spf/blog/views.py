@@ -10,3 +10,7 @@ def index(request):
     return render(request, 'article_list.html', 
         {'articles': articles},
         {'tags': tags})
+
+def article_detail(request, pk):
+    article = Article.objects.get(id=pk)
+    return render(request, 'article_detail.html', {'article': article})
