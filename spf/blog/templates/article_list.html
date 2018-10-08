@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Articles</h2> 
+<ul>
+    {% for article in articles %}
+        <img src="{{article.cover_url}}"/>
+        <li>{{ article.title }}</li>
+        <li>{{ article.subhead}}</li>
+        <li>{{ article.pub_date}}</li>
+        {% comment %} Below is needed to render tag set {% endcomment %}
+        {% for tag in article.tag_set.all %} 
+        <li>{{ tag.tag }}</li>
+        {% endfor %}
+    {% endfor %} 
+</ul> 
+{% endblock %}
