@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<div class="container">
-    <h1>More content marked {{ tags.tag }}</h1>
+<h1 class="container">More content marked {{ tags.tag }}</h1>
     {% for article in tags.articles.all %} 
-            <a href="{% url 'article_detail' pk=article.pk %}"> <img src="{{article.cover_url}}" alt="no image"/> </a>
+        <div class="container">
+            <a href="{% url 'article_detail' pk=article.pk %}"> <img class="img-fluid" src="{{article.cover_url}}" alt="no image"/> </a>
             <h2>{{ article.title }}</h2> 
             <h4>{{ article.subhead }}</h4>
+        </div>
     {% endfor %}
-</div>
 
 
 {% endblock %}
