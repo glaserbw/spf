@@ -13,8 +13,15 @@ def index(request):
 
 def article_detail(request, pk):
     article = Article.objects.get(id=pk)
-    # photos = Photo.objects.get(id=pk)
+    # photo = Photo.objects.get(id=pk)
 
     return render(request, 'article_detail.html',
          {'article': article})
+
+def tag_index(request, pk):
+    articles = Article.objects.all()
+    tags = Tag.objects.get(id=pk)
+    return render(request, 'tag_index.html',
+    {'tags':tags},
+    {'articles' : articles})
     

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>More content marked {{ tags.tag }}</h1>
+    {% for article in tags.articles.all %} 
+            <a href="{% url 'article_detail' pk=article.pk %}"> <img src="{{article.cover_url}}" alt="no image"/> </a>
+            <h2>{{ article.title }}</h2> 
+            <h4>{{ article.subhead }}</h4>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
+
+

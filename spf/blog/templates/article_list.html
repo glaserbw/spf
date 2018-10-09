@@ -4,17 +4,17 @@
 
 {% for article in articles %}
     <div class="container">
-        <img class="container" src="{{article.cover_url}}"/>
+        <a href="{% url 'article_detail' pk=article.pk %}"><img class="container" src="{{article.cover_url}}"/></a>
         <h2><a href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a></h2>
         <p>{{ article.subhead}}</p>
         <p>{{ article.pub_date}}</p>
+
         {% comment %} Below is needed to render tag set {% endcomment %}
         {% for tag in article.tag_set.all %} 
-        <p>Tags: {{ tag.tag }}</p>
+        <p>Tags:<a href="{% url 'tag_index' pk=tag.pk %}"> {{ tag.tag }} </a> </p>
         {% endfor %}
         <br/><hr/><br/>
     </div>
-    
 {% endfor %} 
 
 {% endblock %}
