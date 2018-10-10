@@ -9,13 +9,14 @@
     <img class="img-fluid" src="{{ article.cover_url }}" alt="cover_url">
     
     <hr>
-    <p>{{ article.body }}</p>
+    {% autoescape off %}{{ article.body }}{% endautoescape %}
     <h3> More Photos: </h3>
     {% for photo in article.photos.all %}
         <img class="img-fluid" src="{{ photo.photo_urls }}" alt="no pic">
         <br>
         <p>{{ photo.caption }}</p>
     {% endfor %}
+    <a href="javascript:history.back()">Go Back</a>
 
 </div>
 

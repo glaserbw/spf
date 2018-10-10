@@ -1,11 +1,13 @@
 from django.db import models
+from tinymce import models as tinymce_models
+
 
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length=280)
     subhead = models.CharField(max_length=140)
     pub_date = models.DateField(auto_now_add=True)
-    body = models.TextField()
+    body = tinymce_models.HTMLField()
     cover_url = models.TextField() # Cover image for the article 
     tags = models.ManyToManyField('Tag', blank=True, through='ArticleTag')
 
@@ -35,4 +37,8 @@ class Photo(models.Model):
         return self.photo_urls
 
 
+# body = tinymce_models.HTMLField('body')
+
+# Old version 
+# body = models.TextField()
 

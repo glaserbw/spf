@@ -19,4 +19,5 @@ from django.urls import include, path
 urlpatterns = [
     path('', include('blog.urls')), # Here you can change the path to blog/ for a more nested blog once the site expands 
     path('admin/', admin.site.urls),
+    path('tinymce/', include('tinymce.urls')),
 ]
