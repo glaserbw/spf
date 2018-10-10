@@ -1,9 +1,69 @@
-#title {
-    color: black;
+html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 110 0 auto;
+  }
+  footer {
+    height: 8%;
+    margin-top: 3%;
+    flex-shrink: 0;
     text-align: center;
-}
-
-img {
+    background-color: black;
+    color: white;
+  }
+  img {
     width: 100%;
     height: auto;
 }
+
+header {
+    padding: 2%;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    
+} 
+
+#logo {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    max-height: 100px;
+    font-size:8vw;
+    letter-spacing: -2px;
+}
+
+#logo:hover{
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
+a:hover{
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
