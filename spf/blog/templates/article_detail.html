@@ -9,7 +9,8 @@
     <img class="img-fluid" src="{{ article.cover_url }}" alt="cover_url">
     
     <hr>
-    {% autoescape off %}{{ article.body }}{% endautoescape %}
+    <section class="content">{% autoescape off %}{{ article.body }}{% endautoescape %}</section>
+    <br/><br/>
     <h3> More Photos: </h3>
     {% for photo in article.photos.all %}
         <img class="img-fluid" src="{{ photo.photo_urls }}" alt="no pic">

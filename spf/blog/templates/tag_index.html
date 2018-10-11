@@ -5,8 +5,8 @@
 <h1 class="container">More content marked {{ tags.tag }}</h1>
     {% for article in tags.articles.all %} 
         <div class="container">
-            <a href="{% url 'article_detail' pk=article.pk %}"> <img class="img-fluid" src="{{article.cover_url}}" alt="no image"/> </a>
-            <h2>{{ article.title }}</h2> 
+            <a class="link" href="{% url 'article_detail' pk=article.pk %}"> <img class="img-fluid" src="{{article.cover_url}}" alt="no image"/> </a>
+            <a class="link" href="{% url 'article_detail' pk=article.pk %}"> <h2>{{ article.title }}</h2> </a>
             <h4>{{ article.subhead }}</h4>
             <p>{{ article.pub_date }}</p>
             <br/><hr/><br/>

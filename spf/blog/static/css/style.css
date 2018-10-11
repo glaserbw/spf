@@ -1,14 +1,17 @@
 html, body {
     height: 100%;
   }
-  body {
+body {
     display: flex;
     flex-direction: column;
   }
-  .content {
+
+.content {
     flex: 110 0 auto;
+    font-family: 'Roboto', sans-serif;
   }
-  footer {
+
+footer {
     height: 8%;
     margin-top: 3%;
     flex-shrink: 0;
@@ -16,7 +19,8 @@ html, body {
     background-color: black;
     color: white;
   }
-  img {
+
+img {
     width: 100%;
     height: auto;
 }
@@ -27,8 +31,7 @@ header {
     color: white;
     text-decoration: none;
     text-align: center;
-    font-family: 'Lobster', cursive;
-    
+    font-family: 'Shadows Into Light', cursive;
 } 
 
 #logo {
@@ -37,7 +40,16 @@ header {
     text-decoration: none;
     max-height: 100px;
     font-size:8vw;
+    font-weight: bold;
     letter-spacing: -2px;
+    background-image: -webkit-linear-gradient(left,#CCCCCC, #333333, #4C4C4C,#999999 #fff); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left,#CCCCCC, #333333, #4C4C4C,#999999, #fff); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left,#CCCCCC, #333333, #4C4C4C,#999999, #fff); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left,#CCCCCC, #333333, #4C4C4C,#999999, #fff); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #CCCCCC,#333333, #4C4C4C, #999999,#fff); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 #logo:hover{
@@ -52,18 +64,35 @@ a:hover{
     text-decoration: none;
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
+.link {
+    text-decoration: none;
+    color: black;
 }
 
-h2 {
-    font-family: 'Roboto', sans-serif;
+.link:hover {
+    text-decoration: none;
+    color: black;
 }
 
-h4 {
-    font-family: 'Roboto', sans-serif;
+/* TEST AREA */
+
+.rainbow2 {
+    font-size: 8rem;
+    background-image: -webkit-linear-gradient(left, #CCCCCC, #4C4C4C, #666666, #4c4c4c); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #CCCCCC, #4C4C4C, #666666, #666666); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #CCCCCC, #4C4C4C, #666666,#7f7f7f); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #CCCCCC, #4C4C4C, #666666,#999999); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #CCCCCC, #4C4C4C, #666666,#b2b2b2); /* Standard syntax; must be last */
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
-
-
-
-
+/* Real Rainbow effect - unused */
+/* .rainbow {
+  font-size: 4rem;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+} */

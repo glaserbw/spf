@@ -5,14 +5,16 @@
 
 {% for article in articles %}
     <div class="container">
+        <h3>A photography blog featuring the best of adventures, food, travel and more! </h3>
+        <br/><hr/><br/>
         <a href="{% url 'article_detail' pk=article.pk %}"><img class="img-fluid" src="{{article.cover_url}}"/></a>
-        <h2><a href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a></h2>
+        <h2><a class="link" href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a></h2>
         <p>{{ article.subhead}}</p>
         <p>{{ article.pub_date}}</p>
 
         {% comment %} Below is needed to render tag set {% endcomment %}
         {% for tag in article.tag_set.all %} 
-        <p>Tags:<a href="{% url 'tag_index' pk=tag.pk %}"> {{ tag.tag }} </a> </p>
+        <p>Tags:<a class="tag" href="{% url 'tag_index' pk=tag.pk %}"> {{ tag.tag }} </a> </p>
         {% endfor %}
         <br/><hr/><br/>
     </div>

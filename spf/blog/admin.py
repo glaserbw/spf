@@ -1,8 +1,6 @@
 from django.contrib import admin
-from .models import Article
-from .models import Tag
-from .models import Photo
-from .models import ArticleTag
+from .models import Article, Tag, Photo, ArticleTag
+
 
 # Register your models here.
 admin.site.register(Article)
