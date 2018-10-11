@@ -6,3 +6,4 @@ urlpatterns = [
     path('articles/<int:pk>', views.article_detail, name="article_detail"),
     path('tags/<int:pk>', views.tag_index, name="tag_index"),
 ]
+
