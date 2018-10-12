@@ -37,8 +37,4 @@ class Photo(models.Model):
         return self.photo_urls
 
 
-# body = tinymce_models.HTMLField('body')
-
-# Old version 
-# body = models.TextField()
 
