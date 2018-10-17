@@ -6,6 +6,11 @@ body {
     flex-direction: column;
   }
 
+.intro {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
 .content {
     flex: 110 0 auto;
     font-family: 'Roboto', sans-serif;

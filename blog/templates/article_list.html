@@ -5,8 +5,8 @@
 
 {% for article in articles %}
     <div class="container">
-        <h3>A photography blog featuring the best of adventures, food, travel and more! </h3>
-        <br/><hr/><br/>
+        <p class="intro">A photography blog featuring the best of adventures, food, travel and more! </p>
+        <hr/>
         <a href="{% url 'article_detail' pk=article.pk %}"><img class="img-fluid" src="{{article.cover_url}}"/></a>
         <h2><a class="link" href="{% url 'article_detail' pk=article.pk %}">{{ article.title }}</a></h2>
         <p>{{ article.subhead}}</p>
@@ -47,7 +47,7 @@
 {% endblock %}
 
 {% comment %} Bootstrap Docs {% endcomment %}
-<nav aria-label="Page navigation example">
+{% comment %} <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Previous">
@@ -65,10 +65,10 @@
       </a>
     </li>
   </ul>
-</nav>
+</nav> {% endcomment %}
 
 {% comment %} Blogs solution {% endcomment %}
-{% if users.has_other_pages %}
+{% comment %} {% if users.has_other_pages %}
   <ul class="pagination">
     {% if users.has_previous %}
       <li><a href="?page={{ users.previous_page_number }}">&laquo;</a></li>
@@ -88,6 +88,6 @@
       <li class="disabled"><span>&raquo;</span></li>
     {% endif %}
   </ul>
-{% endif %}
+{% endif %} {% endcomment %}
 
 
