@@ -10,6 +10,7 @@ django = "==2.1.2"
 gunicorn = "*"
 dj-database-url = "*"
 django-heroku = "*" 
+django-tinymce = "*"
 
 [requires]
 python_version = "3.7"
