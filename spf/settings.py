@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'spf.wsgi.application'
 # This is production settings
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(
-    default='postgres://egjpgtuiedsevw:27fa53cdf0de85ba92fc39328c8d39ceb689df4481c083f9e84c199810c97f26@ec2-184-72-234-230.compute-1.amazonaws.com:5432/ddk5h4l73hnhrk'
+    default='postgres://sgijpqmhmgnvvx:e5e4ef00c597f8c3e10f2568ed56974828273a49a07b2cd8a3fe30153ae11fbb@ec2-54-225-97-112.compute-1.amazonaws.com:5432/dce7djpsru8g95'
 )
 
 
