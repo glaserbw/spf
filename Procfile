@@ -1,1 +1,1 @@
-web: gunicorn saltandpepperfamily.wsgi
+web: gunicorn spf.wsgi
