@@ -6,12 +6,10 @@ name = "pypi"
 [packages]
 djangorestframework = "==3.8.2"
 pytz = "==2018.5"
-Django = "==2.1.2"
+django = "==2.1.2"
 gunicorn = "*"
 dj-database-url = "*"
 django-heroku = "*" 
-
-[dev-packages]
 
 [requires]
 python_version = "3.7"
