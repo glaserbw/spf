@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -138,29 +139,14 @@ TINYMCE_DEFAULT_CONFIG = {
 TINYMCE_SPELLCHECKER = True
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'blog/static'),
-    os.path.join(BASE_DIR, 'blog'),
-    os.path.join(BASE_DIR, "static"),
 )
 
-
-# this defines the url for static files
-# eg: base-url.com/static/your-js-file.js
-STATIC_URL = '/static/'
-
-# this is directory name where collectstatic files command will put your app level static files
-STATIC_ROOT = 'staticfiles'
-
-# this is directory paths where you have to put your project level static files
-# you can put multiple folders here
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
 
 
 
